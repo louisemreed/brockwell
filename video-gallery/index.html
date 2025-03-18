@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Thumbnails -->
+    <button class="thumbnail" id="thumb1" onclick="playVideo(1)">
+        <img src="images/Window01.png" alt="Thumbnail 1" id="thumb1-img">
+    </button>
+    
+    <button class="thumbnail" id="thumb2" onclick="playVideo(2)">
+        <img src="images/Window02.png" alt="Thumbnail 2" id="thumb2-img">
+    </button>
+    
+    <button class="thumbnail" id="thumb3" onclick="playVideo(3)">
+        <img src="images/Window03.png" alt="Thumbnail 3" id="thumb3-img">
+    </button>
+    
+    <button class="thumbnail" id="thumb4" onclick="playVideo(4)">
+        <img src="images/Window04.png" alt="Thumbnail 4" id="thumb4-img">
+    </button>
+
+    <!-- Video Players with Custom Controls -->
+    <div class="video-container" id="video-container-1">
+        <video class="video-player" id="video-player-1">
+            <source src="videos/video1.mp4" type="video/mp4" id="video-source-1">
+            Your browser does not support the video tag.
+        </video>
+        <div class="custom-controls">
+            <button class="play-pause-btn">Play</button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time-display">0:00</span>
+        </div>
+        <button class="exit-button" onclick="closeVideo(1)">
+            <img src="images/X-Button.png" alt="Close" id="exit-icon-1">
+        </button>
+    </div>
+
+    <div class="video-container" id="video-container-2">
+        <video class="video-player" id="video-player-2">
+            <source src="videos/video2.mp4" type="video/mp4" id="video-source-2">
+            Your browser does not support the video tag.
+        </video>
+        <div class="custom-controls">
+            <button class="play-pause-btn">Play</button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time-display">0:00</span>
+        </div>
+        <button class="exit-button" onclick="closeVideo(2)">
+            <img src="images/X-Button.png" alt="Close" id="exit-icon-2">
+        </button>
+    </div>
+
+    <div class="video-container" id="video-container-3">
+        <video class="video-player" id="video-player-3">
+            <source src="videos/video3.mp4" type="video/mp4" id="video-source-3">
+            Your browser does not support the video tag.
+        </video>
+        <div class="custom-controls">
+            <button class="play-pause-btn">Play</button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time-display">0:00</span>
+        </div>
+        <button class="exit-button" onclick="closeVideo(3)">
+            <img src="images/X-Button.png" alt="Close" id="exit-icon-3">
+        </button>
+    </div>
+
+    <div class="video-container" id="video-container-4">
+        <video class="video-player" id="video-player-4">
+            <source src="videos/video4.mp4" type="video/mp4" id="video-source-4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="custom-controls">
+            <button class="play-pause-btn">Play</button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time-display">0:00</span>
+        </div>
+        <button class="exit-button" onclick="closeVideo(4)">
+            <img src="images/X-Button.png" alt="Close" id="exit-icon-4">
+        </button>
+    </div>
+
+    <!-- Screensaver Video -->
+    <div id="screensaver-container" onclick="exitScreensaver()">
+        <iframe id="screensaver-iframe" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

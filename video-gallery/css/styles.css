@@ -1,0 +1,175 @@
+/* Base styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 1920px; /* Fixed width as specified */
+  height: 1080px; /* Fixed height as specified */
+  overflow: auto; /* Allow scrolling to see all content */
+}
+
+body {
+  background-image: url('../images/Background_1.png');
+  background-size: 1920px 1080px; /* Exact size, no scaling */
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* Thumbnail styling */
+.thumbnail {
+  width: 285px; /* Fixed width as specified */
+  height: 366px; /* Fixed height as specified */
+  position: absolute;
+  border-radius: 150px 150px 0 0; /* Creates the arch shape at the top */
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); /* Makes images black and white */
+}
+
+/* Exact thumbnail positions as specified */
+#thumb1 {
+  left: 299px;
+  top: 188px;
+}
+
+#thumb2 {
+  left: 644px;
+  top: 188px;
+}
+
+#thumb3 {
+  left: 988px;
+  top: 188px;
+}
+
+#thumb4 {
+  left: 1333px;
+  top: 188px;
+}
+
+/* Video player styling */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-player {
+  width: 90%;
+  max-height: 90vh;
+  position: relative;
+}
+
+/* Custom video controls styling */
+.custom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 102;
+  border-radius: 0 0 4px 4px;
+}
+
+.play-pause-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #444;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 0%;
+}
+
+.time-display {
+  color: white;
+  font-size: 14px;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Exit button styling */
+.exit-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 101;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.exit-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Screensaver styling */
+#screensaver-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 200; /* Higher than regular videos */
+  display: none;
+  cursor: pointer;
+}
+
+#screensaver-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
